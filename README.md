@@ -28,3 +28,6 @@ compute shader dispatches, one for each substep.
 
 The masking drastically improves the situation, but a pattern will still be visible for obvious reasons. The way to solve this is by introducing *randomness*. Basically, the transition table is modified such that there are multiple possible
 transitions in some cases with an associated probability. One such possibility is to simply not apply any rule with a small chance, another possibility is to allow for sand to fall diagonally when it can fall straight.
+
+## Displaying the simulation
+Due to how Godot internally handles a 2-channel texture displayed on a `TextureRect`, the presence of the mask messes with the visuals. Thus, a simple custom shader is attached to the `TextureRect` that only uses the red-channel for visuals. Empty texels will also display with transparency, which may be useful.

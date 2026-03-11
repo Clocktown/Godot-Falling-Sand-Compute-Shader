@@ -1,4 +1,4 @@
-# Godot-Falling-Sand-Compute-Shader
+# Godot Falling Sand Compute Shader
 This was built using my compute shader example as a baseline, see: https://github.com/Clocktown/Godot-ComputeShader-Image-TextureRect-Example
 
 The project features a simple falling sand implementation. No fancy shading. Display happens via a `TextureRect` and sand is continuously spawned at the mouse position. The bottom border acts as a wall, while left/right/top borders are the void and will drain sand. The `TextureRect` contains a script that calculates the texel position of the mouse cursor.

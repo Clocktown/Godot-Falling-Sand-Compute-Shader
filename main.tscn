@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://p2kbrh1l6361"]
+
+[ext_resource type="Shader" uid="uid://jwvb47kl7uuc" path="res://Sand.gdshader" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://vmlo3mu4gi7x" path="res://sand_simulator.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://cmse2gdepv31a" path="res://texture_rect.gd" id="2_h2yge"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h2yge"]
+shader = ExtResource("1_0xm2m")
+
+[node name="Main" type="Control" unique_id=980511851]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1407419877]
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_h2yge")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand_mode = 2
+stretch_mode = 5
+script = ExtResource("2_h2yge")
+
+[node name="SandSimulator" type="Node" parent="." unique_id=1274529874 node_paths=PackedStringArray("textureRect")]
+script = ExtResource("1_ig7tw")
+textureRect = NodePath("../TextureRect")
+width = 100
+height = 100

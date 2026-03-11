@@ -1,0 +1,18 @@
+# Godot 4+ specific ignores
+# Godot-specific
+.import/
+*.import
+*.tscn*.tmp
+*.gd.uid
+*.mono/
+*.godot/
+export.cfg
+
+# OS temp files
+.DS_Store
+Thumbs.db
+.godot/
+/android/
+*.import
+*.tmp
+*.uid

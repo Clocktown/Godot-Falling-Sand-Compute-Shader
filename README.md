@@ -31,7 +31,7 @@ transitions in some cases with an associated probability. One such possibility i
 
 ## Performance
 It is **blazingly** fast. The default resolution is only set to a low value because it looks nice and has pixel-art vibes. Try changing the `TextureRect` properties so it no longer fits the width and then increase the resolution of the simulation to, say, 4000x4000, and check the visual profiler. On my GPU,
-this runs in 0.1-0.2ms per `_physics_process` (i.e. for two substeps).
+this runs in 0.1-0.2ms per `_physics_process` (i.e. for two substeps). The entry in question is "Compute Sand".
 
 ## Displaying the simulation
 Due to how Godot internally handles a 2-channel texture displayed on a `TextureRect`, the presence of the mask messes with the visuals. Thus, a simple custom shader is attached to the `TextureRect` that only uses the red-channel for visuals. Empty texels will also display with transparency, which may be useful.
